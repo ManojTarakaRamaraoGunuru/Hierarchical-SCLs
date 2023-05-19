@@ -62,7 +62,7 @@ make hrlock
 1. start with main.c
 2. main.c refers functions in hrscl.h through lock.h
 3. hrscl.h uses functinons from two independent files, node_fairlock.h and fairlock.h
-4. (Optional) wanted to add any sturcture, add it in struct.h
+4. (Optional) wanted to add any sturcture for debugging purpose, add it in struct.h
 
 ## Issues need to be handled
 
@@ -74,9 +74,9 @@ make hrlock
 ## Important Notes 
 
 1. To get a specific thread information, we have pthread_getspecific and pthread_setspecific. To get a specific information for a group of threads, I created a node_specific_array.
-2. In this code, threads traverse from top to bottom. So, they need to know path from root to leaf. Currently, I computed path in main.c. and giving the path in lock_acquire of main.c itself. 
+2. In this code, threads traverse from top to bottom. So, they need to know path from root to leaf. Currently, I computed path in main.c. and gave the path in lock_acquire of main.c itself. 
 3. node_fairlock.h and fairlock.h are almost similar except some tweaks.
 4. We are following 0-based indexing, 0 is the root.
-5. Our traditonal example(discussed in slides) lies in input/input.txt
+5. Our traditonal example(discussed in slides) is in input/input.txt
 
 </font>
